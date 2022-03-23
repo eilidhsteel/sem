@@ -29,5 +29,10 @@ public class AppIntegrationTest
         assertEquals(emp.last_name, "Garigliano");
     }
 
-    //id doesn't exist
+    @Test
+    void testGetNullEmployee()
+    {
+        Employee emp = app.getEmployee(-1);
+        assertEquals(emp, null);
+    }
 }
